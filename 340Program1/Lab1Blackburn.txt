@@ -1,0 +1,6 @@
+Michael Blackburn
+CSCI 340
+Dr. Leclerc
+January 27, 2014
+
+It should never always take the exact same amount of time to execute these simple actions, as system resources available to execute these commands should always be varied, depending on the other processes utilizing resources when the command is executed.
