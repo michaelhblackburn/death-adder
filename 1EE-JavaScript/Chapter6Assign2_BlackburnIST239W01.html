@@ -1,0 +1,44 @@
+<!--Chapter 6, assignment 2		Michael Blackburn		IST 239 W01-->
+<html>
+<head>
+<title>Chapter 6, assignment 2	Michael Blackburn</title>
+<script type="text/javascript">
+var price=prompt("Please enter the vehicle price(whole numbers only, no $ signs or commas): ");
+var downPayment=prompt("Please enter the amount of your down payment(whole numbers only, no $ signs or commas): ");
+var yearRate=prompt("Please enter your interest rate(e.g., 7.5): ");
+var loanAmount=parseFloat(price) - parseFloat(downPayment);
+var months=24;
+var payment;
+var monthlyRate=parseFloat(yearRate) / 1200;
+function MonthlyPayment(monthlyRate, months, loanAmount)
+{
+	var baseAmount=Math.pow(1 + monthlyRate, months);
+	return loanAmount * monthlyRate / (1 - (1 / baseAmount));
+}
+
+</script>
+<body bgcolor="pink">
+<script type="text/javascript">
+price = parseFloat(price);
+downPayment = parseFloat(downPayment);
+price = price.toFixed(2);
+downPayment = downPayment.toFixed(2);
+document.write("<h1>Loan Calculator</h1></br>");
+document.write("Vehicle price: $"+price+"</br>");
+document.write("Down payment: $"+downPayment+"</br>");
+document.write("Interest Rate: "+yearRate+"%</br>");
+document.write("Loan Amount: $"+loanAmount+"</br>");
+document.write("<pre># of Months		Payment/month</pre>");
+while(months <= 60)
+{
+	payment = MonthlyPayment(monthlyRate, months, loanAmount);
+	payment = payment.toFixed(2);
+	document.write("<pre>     "+months+"                    $"+payment+"</pre>");
+	months += 12;
+}
+</script>
+<body>
+<html>
+
+
+		

@@ -1,0 +1,55 @@
+<!--Chapter 8 Assignment 1		Michael Blackburn		IST 239 W01-->
+<html>
+<head>
+<title>Chapter 8 Assignment 1	Michael Blackburn</title>
+<h1>Browser Settings:</h1>
+<script type="text/javascript">
+var hasJava=navigator.javaEnabled();
+if(hasJava == true){document.write("Java is enabled!</br>");}
+else{document.write("Java is disabled.</br>");}
+document.write("Browser platform: "+navigator.platform+"</br>");
+document.write("Browser code name: "+navigator.appCodeName+"</br>");
+document.write("Browser name: "+navigator.appName+"</br>");
+document.write("Browser version: "+navigator.appVersion+"</br>");
+</script></br>
+</head>
+<body>
+<p>Person's Properties:</p>
+<script type="text/javascript">
+var name=prompt("Please enter your full name:", " ");
+var age=prompt("Please enter your age: ", " ");
+var gen=prompt("What is your gender? (M, m, F, or f only)", " ");
+function lifeExpect(age, gen){
+	var leMale=76;
+	var leFemale=81;
+	var curAge=age;
+	var curGen=gen;
+	var lifeExpect;
+	if(curGen == 'M' || curGen == 'm'){
+		lifeExpect = leMale - curAge;}
+	else{
+		lifeExpect = leFemale - curAge;}
+	return lifeExpect;}
+var lifeExpectancy=lifeExpect(age, gen);
+function getGender(gen){
+	var curGen=gen;
+	if(curGen == 'M' || curGen == 'm'){
+		gender = 'male';}
+	else{
+		gender = 'female';}
+	return gender;}
+var gender=getGender(gen);
+function person(name, age, gen, lifeExpectancy){
+	this.name=name;
+	this.age=age;
+	this.gen=gen;
+	this.lifeExpectancy=lifeExpectancy;}
+var person1 = new person(name, age, gen, lifeExpectancy);
+for(var prop_name in person1){
+	document.write(person1[prop_name]+"</br>");}
+document.write("</br>");
+with(person1){
+	document.write("Hi "+name+", as a "+age+" year old "+gender+" you are expected to live "+lifeExpectancy+" more years!");}
+</script>
+</body>
+</html>

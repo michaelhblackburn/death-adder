@@ -1,0 +1,4 @@
+John Smith 7.25 40
+Ann Davis 10.0 35
+Michael Jones 8.5 40
+Richard Edwards 9 30

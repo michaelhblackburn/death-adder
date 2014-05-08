@@ -1,0 +1,4 @@
+Computer science is more than writing code and building robots. 
+It is the blending of computational principles and human creativity with the application of computing technologies.
+Since its inception, computer science has revolutionized the way we compute, communicate, find information, and conduct business. 
+Problem solving and logical reasoning are at the core of computer science, making it one of the most pervasive areas of study.

@@ -1,0 +1,87 @@
+
+Primitive type variables
+------------------------
+
+Example,
+int x;
+x = 7;
+
+int y = x;
+Both x and y hold the same value.
+
+x = 3;
+Now x is 3 and y is still 7.
+
+Observations:
+No need to say "new" to create storage for primitive types.
+Assignment operator = copies the value found on the right side
+into the variable named on its left side.
+
+
+Reference variables
+--------------------------
+String x;
+x = new String("Blue");
+
+String y = x;
+How many String objects do we have?
+Only one.
+When we assign to a reference variable, we designate to
+what object it refers or points.
+Both references x and y point to one String object whose value is "Blue"
+
+x = new String("Green");
+Have we lost the "Blue"?
+No, reference y still points to "Blue", while x points to "Green"
+
+But if we then say...
+x = y;
+Both x and y again point to "Blue"
+Since no reference variable points to "Green" that String object is
+lost and Java will garbage collect reclaiming its unused memory for
+other new objects to use.  We can force Java to garbage collect by
+saying x = null;
+
+Observation - reference variables behave like primitive variables if we
+keep in mind that what is being assigned by operator= is a value that 
+tells Java where in memory a particular object is located.
+
+
+Arrays of Reference Variables
+-----------------------------
+
+String[] words;
+words = new String[3]; // We now have 3 references, each of which can refer to a String object.
+
+words[0] = new String("Red");
+Red is the first word.
+
+Scoot or move Red from first slot into second slot.
+words[1] = words[0];
+Both references point to one object "Red"
+
+words[0] = new String("Blue");
+Now we have two String objects "Blue" and next "Red"
+
+No String object exists for words[2], so we would get a null pointer crash if
+we tried to access its contents...
+System.out.println("World length is " + words[2].length());
+
+String W = new String("Green");
+words[2] = T;
+
+We can use loops to access multiple elements of an array of objects.
+int totalLetters = 0;
+for(int i = 0; i < words.length; i++)
+  totalLetters = totalLetters + words[i].length();
+
+Use DOT operator to access public methods of the object referred to by each array element.
+
+words.length refers to the size of the array when it was created.
+Since we said words = new String[3], then words.length is always 3.
+If our array were not full then we would be responsible for keeping track of
+how many of its elements were used and set our loop to only visit those
+elements that are used.
+
+
+  

@@ -1,0 +1,53 @@
+public class FATicketOrderedList implements TicketOrderedList{
+	/*Version 2 of add() method - insert into next open slot
+	 *param T Given Ticket initialized object
+	 *@return true if not full and T's key unique with given ticket having been inserted into List
+	 *false leaving List unchanged*/
+	 
+	 public boolean add(Ticket T){
+	 	if(isFull()){ //check to see if list is full
+	 		return true;
+	 	}
+	 	/*if(linearSearch(T.getNum(), myList) >= 0){  linear search option to check for duplicate
+	 		return false;
+	 	}*/
+	 	if(retrieve(T.getNum()) != null){ //retireve option to check for duplicate
+	 		return false;
+	 	}
+	 	myList[myCount] = T; //add T to next entry in array
+	 	myCount++; //increment count
+	 	return true; //return value 
+	 }
+	 private int linearSearch(int key, Ticket[] list){
+	 	for(int i = 0; i < myCount; i++){
+	 		if(myList[i].getNum() == key){ //get ticket number and compare to key
+	 			return i;
+	 		}
+	 	}
+	 	return -1; //not found
+	 }
+	 public Ticket retrieve(int key){
+	 	int index = linearSearch(key, myList);
+	 	if (index == -1){
+	 		return null;
+	 	}
+	 	else{
+	 		return myList[index]
+	 	}
+	 }
+	 public void print(){
+	 	bubbleSort(myList);
+	 	for (int i = 0; i < myCount; i++){
+	 		System.out.println(myList[i].toString());
+	 	}
+	 }
+	 public bubbleSort(Ticket[] data){
+	 	for (int i = 0; i < data.length - 1; i++){
+	 		for (int j = data.length - 1; j > i; j--){
+	 			if (data[j-1].getNum() > data[j].getNum(){
+	 				swap(data, j-1, j);
+	 			}
+	 		}
+	 	}
+	 }
+}

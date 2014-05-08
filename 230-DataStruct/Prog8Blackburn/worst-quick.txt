@@ -1,0 +1,10 @@
+alpha
+charlie
+echo
+golf
+indigo
+kilo
+november
+romeo
+tango
+victor

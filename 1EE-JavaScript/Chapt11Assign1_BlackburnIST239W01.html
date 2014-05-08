@@ -1,0 +1,45 @@
+<!--Chapter 11	Assignment 1	Michael Blackburn	IST 239 W01-->
+<html>
+<head> 
+<title>Chapter 11 Assignment 1	Michael Blackburn</title>
+<script type="text/javascript">
+var books = new Array(5);
+books[0] = "War and Peace";
+books[1] = "Huckleberry Finn";
+books[2] = "The Return of the Native";
+books[3] = "A Christmas Carol";
+books[4] = "Exodus";
+var authors = new Array();
+for(var ct = 0; ct < books.length; ct++){
+	authors[ct]=prompt("Enter the name of the author for "+books[ct]+": ", " ");
+}
+var author_title = new Array(5);
+for(var ct = 0; ct < books.length; ct++){
+	author_title[ct] = authors[ct]+" wrote "+books[ct];
+}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+document.write("****************************************************************</br>");
+for(var ct = 0; ct < books.length; ct++){
+	document.write("<b>Book: </b>"+books[ct]+" <b>Author: </b>"+authors[ct]+"</br>");
+}
+document.write("****************************************************************</br>");
+for(var ct = 0; ct < author_title.length; ct++){
+	document.write(author_title[ct]+"</br>");
+}
+document.write("****************************************************************</br>");
+author_title.pop();
+for(var ct = 0; ct < author_title.length; ct++){
+	document.write(author_title[ct]+"</br>");
+}
+document.write("****************************************************************</br>");
+author_title.sort();
+for(var ct = 0; ct < author_title.length; ct++){
+	document.write(author_title[ct]+"</br>");
+}
+document.write("****************************************************************</br>");
+</script>
+</body>
+</html>

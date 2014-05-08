@@ -1,0 +1,4 @@
+John Smith's pay: $356.00
+Ann Davis's pay: $407.75
+Michael Jones's pay: $406.00
+Richard Edwards's pay: $319.50

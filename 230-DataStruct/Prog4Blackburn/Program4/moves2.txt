@@ -1,0 +1,26 @@
+17
+0  DOWN
+1  UP
+0  DOWN
+1  LEFT
+0  DOWN
+1  LEFT
+0  DOWN
+1  LEFT
+0  RIGHT
+1  DOWN
+0  DOWN
+1  LEFT
+0  DOWN
+1  LEFT
+0  DOWN
+1  LEFT
+0  LEFT
+
+
+
+
+
+
+
+

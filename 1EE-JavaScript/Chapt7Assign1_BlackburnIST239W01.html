@@ -1,0 +1,42 @@
+<!--Chapter 7 Assignment 1 	Michael Blackburn  	IST 239 W01-->
+<html>
+<head>
+<title>Chapter 7 Assignment 1	Michael Blackburn</title>
+<h1>Event Handlers At Work!</h1>
+<h3>by Michael Blackburn</h3>
+</head>
+<body>
+<a href="javascript:void(0)"
+	onmouseover="window.status='This a an onMouseover event.'; return true"
+	onmouseout="window.status=' '; return true">Put your mouse here to see status 
+		info change at bottom</a></br></br>
+<form>
+<input type="button" value="Click Me" onClick="window.alert('You clicked the button!')"></form>
+<form>
+My name is<input type="text" value="Sam" id="nameBox" onChange="nameChange()"> 
+</form>
+<script type="text/javascript"> 
+function nameChange(){ var name1 = document.getElementById("nameBox").value;
+	window.alert("Name was changed to: "+name1);
+}
+</script>	
+<form>
+<input type="button" value="Reload" id="reload"
+	onmouseover="window.status='refresh this page'; return true"
+	onmouseout="window.status=' '; return true">
+</form>
+<script type="text/javascript">
+var localPage = "Chapt7Assign1_BlackburnIST239W01.html";
+var reloadButton = document.getElementById("reload");
+function reloadPage(){
+	window.location = localPage;
+};
+reloadButton.onclick = reloadPage;
+</script>
+<form>
+<input type="button" value="My Favorite Site"
+	onmouseover="window.status='Open new window to http://www.tuaw.com'; return true"
+	onmouseout="window.status=' '; return true"
+	onclick="window.open('http://www.tuaw.com')"></form>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!--Chapter 6, assignment 1		Michael Blackburn 	IST 239 W01-->
+<html>
+<head>
+<title>Chapter 6 assignment 1  Michael Blackburn</title>
+<script type="text/javascript">
+var grade1=prompt("Enter test grade 1(whole numbers only): ", " ");
+var grade2=prompt("Enter test grade 2(whole numbers only): ", " ");
+var grade3=prompt("Enter test grade 3(whole numbers only): ", " ");
+var average;
+var averageGrade;
+var message;
+function calcAverage(grade1, grade2, grade3)
+{
+	var g1 = parseInt(grade1);
+	var g2 = parseInt(grade2);
+	var g3 = parseInt(grade3);
+	var average = Math.round((g1 + g2 + g3) / 3);	
+	return average;
+}
+function findAverageGrade(average)
+{
+	if(average >= 91)
+		averageGrade = 'A';
+	else if(average < 91 && average >= 81)
+		averageGrade = 'B';
+	else if(average < 81 && average >= 71)
+		averageGrade = 'C';
+	else if(average < 71 && average >= 65)
+		averageGrade = 'D';
+	else 
+		averageGrade = 'F';
+	return averageGrade;
+}
+</script>
+</head>
+<body bgcolor="pink"/>
+<script type="text/javascript">
+average=calcAverage(grade1, grade2, grade3);
+averageGrade=findAverageGrade(average);
+switch(averageGrade)
+{
+	case "A":
+		message="Great job, keep it up ";
+		break;
+	case "B":
+		message="Very nice work ";
+		break;
+	case "C":
+		message="You can do it, keep studying ";
+		break;
+	case "D":
+		message="You need some help, see the teacher ";
+		break;
+	case "F":
+		message="Please schedule an appointment with your advisor ";
+		break;
+	default:
+		message="No input received ";
+}
+document.write("Your three exam scores are: </br>");
+document.write("Exam 1: "+grade1+"</br>");
+document.write("Exam 2: "+grade2+"</br>");
+document.write("Exam 3: "+grade3+"</br>");
+document.write("Average: "+average+"</br>");
+document.write("Course grade: "+averageGrade+"</br>");
+document.write(message);
+</script>
+</body>
+</html>

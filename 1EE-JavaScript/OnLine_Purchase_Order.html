@@ -1,0 +1,161 @@
+<!--Chapter 14 Assignment 1		Michael Blackburn	IST 239 W01-->
+<html>
+<head>
+<title>Chapter 14 Assignment 1	Michael Blackburn</title>
+<h1>Purchase Order</h1>
+</head>
+</body>
+<form name="opo" action="FormProcessor.html" method="get" onsubmit="return validate();" onreset="location.reload()">
+<h2>Products</h2>
+Hand Tools: <select name="handTools">
+<option value="saw">Saw</option>
+<option value="hammer">Hammer</option>
+<option value="screwdriver">Screwdriver</option>
+<option value="wrench">Wrench</option>
+<option value="pliers">Pliers</option>
+</select>
+Power Tools: <select name="powerTools">
+<option value="circSaw">Circular Saw</option>
+<option value="sabSaw">Sabre Saw</option>
+<option value="drill">Drill</option>
+<option value="beltSand">Belt Sander</option>
+<option value="tabSaw">Table Saw</option>
+</select>
+Building Materials: <select name="buildingMat">
+<option value="plywood">Plywood</option>
+<option value="shingles">Shingles</option>
+<option value="nails">Nails</option>
+<option value="screws">Screws</option>
+</select>
+<h2>Customer Information</h2>
+First Name <input type="text" value="First Name" name="firstName" id="fnBox">
+Last Name <input type="text" value="Last Name" name="lastName" id="lnBox"></br>
+Street Address 1 <input type="text" value="Address 1" name="address1" id="add1Box" size="50"></br>
+Street Address 2 <input type="text" value="Address 2" name="address2" id="add2Box" size="50"></br>
+City <input type="text" value="City" name="city" id="cityBox" size="30">
+State <input type="text" value="State" name="state" id="stateBox" size="4" maxlength="2">
+Zip <input type="text" value="Zip" name="zip" id="zipBox" size="10" maxlength="5"></br>
+Phone <input type="text" value="Phone" name="phone" id="phoneBox">
+Fax <input type="text" value="Fax" name="fax" id="faxBox">
+<p>Payment Method? 
+<input type="radio" name="payMeth" value="visa"/>Visa
+<input type="radio" name="payMeth" value="mc"/>MasterCard
+<input type="radio" name="payMeth" value="amEx"/>American Express</p>
+Credit Card Number <input type="text" value="Card Number" name="creditCard" id="cardNumBox" size="45" maxlength="16"></br>
+Expiration Month <select name="month">
+<option value="00">--</option>
+<option value="01">01</option>
+<option value="02">02</option>
+<option value="03">03</option>
+<option value="04">04</option>
+<option value="05">05</option>
+<option value="06">06</option>
+<option value="07">07</option>
+<option value="08">08</option>
+<option value="09">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select>
+Expiration Year <select name="year">
+<option value="00">--</option>
+<option value="2010">2010</option>
+<option value="2011">2011</option>
+<option value="2012">2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+</select></br>
+<input type="submit" value="Submit Order">
+<input type="reset" value="Reset Form">
+</form>
+<script type="text/javascript">
+function validate(){
+var fn = document.getElementById.fnBox.value;
+/*var ln = document.getElementById.lnBox.value;
+var add1 = document.getElementById.add1Box.value;
+var cit = document.getElementById.cityBox.value;
+var st = document.getElementById.stateBox.value;
+var zp = document.getElementById.zipBox.value;
+var ph = document.getElementById.phoneBox.value;
+//var card = document.getElementById.payMeth.value;
+var mo = document.getElementById.month.value;
+var yr = document.getElementById.year.value;*/
+
+//function checkFN(fn){
+if(fn == "" /*|| fn == "First Name"*/){
+	window.alert("Please enter your first name.");
+	return false;
+	}
+else{ 
+	return true;
+}
+/*function checkLN(ln){
+if(ln == " " || ln == "Last Name"){
+	window.alert("Please enter your last name.");
+	//return false;
+	}
+}
+function checkADD1(add1){
+if(add1 == " " || add1 == "Address 1"){
+	window.alert("Please enter your address.");
+	//return false;
+	}
+}
+function checkADD2(add2){
+if(add2 == " " || add2 == "Address 2"){
+	window.alert("Please enter your address");
+	//return false;
+	}
+}
+function checkCIT(cit){
+if(cit == " " || cit == "City"){
+	window.alert(Please enter your city.");
+	//return false;
+	}
+}
+function checkST(st){
+if(st == " " || st == "State"){
+	window.alert("Please enter your state's postal abbreviation.");
+	//return false;
+	}
+}
+function checkZP(zp){
+if(zp == " " || zp =="Zip"){
+	window.alert("Please enter your postal code");
+	//return false;
+	}
+}
+function checkPH(ph){
+if(ph == " " || ph == "Phone"){
+	alert("Please enter a valid phone number");
+	return false;
+	}
+}
+/*function checkCARD(card){
+if(card == false){
+	alert("Please select your method of payment.");
+	//return false;
+	}
+}*//*
+function checkMO(mo){
+if(mo == "00"){
+	window.alert("Please select the month of your credit card's expiration.");
+	//return false;
+	}
+}
+function checkYR(yr){
+if(yr == "00"){
+	window.alert("Please select the year of your credit card's expiration.");
+	//return false;
+	}
+}*/	
+
+}
+
+</script>
+</body>
+</html>
+
+
+

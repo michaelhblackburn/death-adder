@@ -1,0 +1,32 @@
+<!--Chapter 5, assignment 1		Michael Blackburn		IST 239 W01-->
+<html>
+<head>
+<title>Chapter 5 Assignment 1  Michael Blackburn</title>
+<script type="text/javascript">
+var usDollars=prompt("Please enter an amount in US Dollars for conversion: ", " ");
+var britishPounds=.62595;
+var japYen=80.622;
+var euro=.703631;
+var cadDollar=.974177;
+var chiYuan=6.4677;
+function calc_exchange(us, other)
+{
+	var result;
+	var dollars=us;
+	var foreign=other;	
+	result = dollars * foreign;
+	return result;
+}
+</script>
+</head>
+<body bgcolor="white">
+<script type="text/javascript">
+document.write("<img src='USD.gif'/>"+"$"+usDollars+" in U.S. Currency is approximately equivalent to:</br>");
+document.write(calc_exchange(usDollars, britishPounds)+" GBP (Great British Pounds) <img src='GBP.gif'/></br> ");
+document.write(calc_exchange(usDollars, japYen)+" JPY (Japanese Yen) <img src='JPY.gif'/></br>");
+document.write(calc_exchange(usDollars, euro)+" EUR (EU Euro) <img src='EUR.gif'/></br>");
+document.write(calc_exchange(usDollars, cadDollar)+" CAD (Canadian Dollars) <img src='CAD.gif'/></br>");
+document.write(calc_exchange(usDollars, chiYuan)+" CNY (Chinese Yuan) <img src='CNY.gif'/></br>");
+</script>
+</body>
+</html>

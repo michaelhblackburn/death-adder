@@ -1,0 +1,33 @@
+<!--IST 239 W01		Michael Blackburn 	Chapter 4, assignment 1-->
+<html>
+<head>
+<title>Chapter 4 Assignment 1</title>
+<script type="text/javascript">
+var hoursWorked=prompt("How many hours did you work this pay period?(whole numbers only, no decimals, commas, or $ signs)", " ");
+var payRate=prompt("What is your hourly wage?(decimal format with up to two number on either side of the decimal)", " ");
+var taxRate=prompt("What is your tax rate?(decimal format with up to two number on either side of the decimal)", " ");
+var netPay;
+function calculate_pay(hoursWorked, payRate, taxRate)
+{
+	var hours = hoursWorked;
+	var rate = payRate;
+	var tax = taxRate;
+	var grossPay = hours * rate;
+	var taxAmount = grossPay * (tax / 100);
+	var net = grossPay - taxAmount;
+	return net;
+}
+</script>
+</head>
+<body bgcolor="lightblue">
+<p>
+<script type="text/javascript">
+netPay=calculate_pay(hoursWorked, payRate, taxRate);
+document.write("<h1><b>Hours Worked: "+hoursWorked+"</b></h1>");
+document.write("<h1><b>Hourly Payrate: $"+payRate+"</b></h1>");
+document.write("<h1><b>Tax Rate Applied: "+taxRate+"%</b></h1>");
+document.write("<h1><b>Net Pay = $"+netPay+"</b></h1>");
+</script>
+</p>
+</body>
+</html>
