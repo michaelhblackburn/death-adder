@@ -1,0 +1,7 @@
+Group 1 - under 128 = 5399
+Group 2 - under 256 = 6982
+Group 3 - under 512 = 11166
+Group 4 - under 1024 = 12391
+Group 5 - under 2048 = 16985
+Group 6 - under 4096 = 16240
+Group 7 - over 4096 = 94028

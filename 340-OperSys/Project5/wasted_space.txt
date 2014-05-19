@@ -1,0 +1,5 @@
+Total wasted space for 512 = 28364923 bytes
+Total wasted space for 1024 = 60427387 bytes
+Total wasted space for 2048 = 127542395 bytes
+Total wasted space for 4096 = 282283131 bytes
+Total wasted space for 8192 = 675302523 bytes

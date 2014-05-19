@@ -1,0 +1,7 @@
+Total throughput for 512 = 1.5838752518554714E12
+Total throughput for 1024 = 7.919276404552273E11
+Total throughput for 2048 = 3.959539333097309E11
+Total throughput for 4096 = 1.9796710498829996E11
+Total throughput for 8192 = 9.897396484371999E10
+
+

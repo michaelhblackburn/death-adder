@@ -1,0 +1,16 @@
+Project 5
+CSCI 340
+Michael Blackburn
+
+Analysis of the graphs to obtain an "optimal" block size for the system
+shows an optimal block size would be 4096 bytes. While the graph shows 
+an intersection of the Wasted Space and Throughput somewhere close to the
+mean of 2048 and 4096 (about 3072). With a block size of 2048, we see 
+excessive wasted space, about 350% greater than with a block size of
+512, but with 75% less in the way of throughput. Moving up to a block 
+size of 4096, we have a significant increase in wasted space over the 512 
+byte block, but throughput again decreases (87.5% less) over the 512 byte
+block size. As the balance falls between these two, it makes sense to 
+move the block size up to gain the throughput advantage - the improvement
+in performance would certainly make up for the space wasted, especially in
+today's world where storage is not at a premium.
